@@ -1,4 +1,4 @@
-## End to End Machine Learning Project
+## Student Math Score Prediction Project
 
 1. Docker Build checked
 2. Github Workflow
