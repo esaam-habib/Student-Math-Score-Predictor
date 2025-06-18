@@ -1,37 +1,87 @@
-## Student Math Score Prediction Project
+# 📊 Student Math Score Predictor
 
-1. Docker Build checked
-2. Github Workflow
-3. Iam User In AWS
+A machine learning-based web application that predicts a student's math score using multiple algorithms. The app includes comprehensive data preprocessing, model evaluation, visualization, and deployment on AWS.
 
-## Docker Setup In EC2 commands to be Executed
+---
 
-#optinal
+## 🔍 Overview
 
-sudo apt-get update -y
+This project demonstrates the full lifecycle of a machine learning application—from data preprocessing and model training to deployment on AWS. It aims to accurately predict student math scores based on features such as gender, parental education, test preparation, and more.
 
-sudo apt-get upgrade
+---
 
-#required
+## 🚀 Features
 
-curl -fsSL https://get.docker.com -o get-docker.sh
+- 📈 Predict math scores using:
+  - Linear Regression
+  - Decision Tree
+  - Random Forest (with hyperparameter tuning)
+- 🧼 Robust data preprocessing:
+  - Handling missing values
+  - Encoding categorical variables
+  - Feature scaling
+- 📊 Visualizations with Matplotlib and Seaborn
+- ☁️ Deployed on **AWS EC2** via Docker image from **AWS ECR**
+- 🌐 Accessible via a user-friendly web interface
 
-sudo sh get-docker.sh
+---
 
-sudo usermod -aG docker ubuntu
+## 🧰 Tech Stack
 
-newgrp docker
+| Component              | Technology                      |
+|------------------------|----------------------------------|
+| Language               | Python 3.x                      |
+| ML Libraries           | Scikit-learn, Pandas, NumPy     |
+| Visualization          | Matplotlib, Seaborn             |
+| Web Framework          | Flask / Streamlit (based on your setup) |
+| Deployment             | Docker, AWS ECR, AWS EC2        |
+| Others                 | joblib, pickle (for model storage) |
 
-## Configure EC2 as self-hosted runner:
+---
 
-## Setup github secrets:
+## 🧠 Machine Learning Approach
 
-AWS_ACCESS_KEY_ID=
+### Algorithms Used:
+- 🔹 Linear Regression
+- 🔹 Decision Tree Regressor
+- 🔹 Random Forest Regressor (with GridSearchCV for hyperparameter tuning)
 
-AWS_SECRET_ACCESS_KEY=
+### Metrics:
+- R² Score
+- Mean Squared Error (MSE)
+- Mean Absolute Error (MAE)
 
-AWS_REGION = us-east-1
+---
 
-AWS_ECR_LOGIN_URI = 
+## 📊 Visualizations
 
-ECR_REPOSITORY_NAME = STUDENT-PERFORMANCE-IN-MATHS
+The following charts help understand feature relationships and model insights:
+
+- Correlation heatmaps
+- Distribution plots
+- Box plots for outlier detection
+- Actual vs Predicted Score plots
+
+---
+
+## 📝 Sample Input Features
+
+gender: Male / Female
+
+parental level of education: Bachelor’s / Master’s / etc.
+
+test preparation course: completed / none
+
+socio-economic status of student: numeric
+
+student studying hours: numeric
+
+school infrastructure: good / better / best / bad / worst
+
+
+
+## 👨‍💻 Author
+Developed by Esaam Habib
+
+
+
